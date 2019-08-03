@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/rvItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0000ffff"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="8dp"
+    android:layout_marginHorizontal="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:padding="5dp">
+        <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="135dp"
+                android:layout_height="190dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"/>
+        <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="40dp" android:layout_height="wrap_content"
+                  android:drawableLeft="@drawable/star"
+                  android:text="1.0"
+                  android:background="@drawable/rate"
+                  android:textColor="#FFC42E"
+                  android:textSize="12sp"
+                  app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+                  app:layout_constraintStart_toStartOf="@+id/ivImage" android:layout_marginBottom="4dp"
+                  android:layout_marginStart="4dp"/>
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Title"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/ivImage"/>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cvPreview"
+                android:layout_width="135dp"
+                android:layout_height="25dp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintStart_toStartOf="@+id/ivImage" app:layout_constraintEnd_toEndOf="@+id/ivImage"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Preview"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
